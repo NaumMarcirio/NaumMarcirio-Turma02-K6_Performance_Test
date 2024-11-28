@@ -1,0 +1,19 @@
+{
+  "name": "k6-performance-testing",
+  "version": "1.0.0",
+  "description": "api performance tests with k6",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"**/**.[jt]s?(x)\"",
+    "verify": "prettier --check \"**/**.[jt]s?(x)\"",
+    "test": "k6 run --out web-dashboard src/tests/Tests.spec.js",
+    "ci": "npm run format && npm run verify && npm run test"
+  },
+  "devDependencies": {
+    "k6": "^0.0.0",
+    "prettier": "^3.3.3"
+  },
+  "dependencies": {
+    "k6-performance-testing": "file:"
+  }
+}
